@@ -20,6 +20,15 @@ textarea {
   border-radius: 15px;
 }
 
+.clearBtn {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(245, 53, 53);
+  color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
 .row {
   border-top: 1px solid white;
 }
@@ -49,7 +58,7 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #10bb49;
   color: white;
 }
 
