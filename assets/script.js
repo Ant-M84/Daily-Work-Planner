@@ -6,25 +6,27 @@ $(document).ready(function () {
     localStorage.setItem(hour, task);
   });
 
-  $(".time-block").each(function () {
-    var workHour = parseInt($(this).attr("id").split("hour")[1]);
-    var currentTime =  dayjs().hour;
+  function timeCode () {
+  var currentTime =  dayjs().hour();
+  $(".time-block").each(function () {  
+    var workHour = parseInt($(this).attr("id").split()[0]);
     if (workHour === currentTime) {
-    // $(this).removeClass("past");
-    //  $(this).removeClass("future");
+      $(this).removeClass("past");
+      $(this).removeClass("future");
       $(this).addClass("present");
     }
     else if (workHour < currentTime) {
-     //  $(this).removeClass("present");
-     // $(this).removeClass("future");
+      $(this).removeClass("present");
+      $(this).removeClass("future");
       $(this).addClass("past");
     }
     else {
-    //  $(this).removeClass("present");
-    //  $(this).removeClass("past");
+      $(this).removeClass("present");
+      $(this).removeClass("past");
       $(this).addClass("future");
     }
   })
+}
 
     $("#9 .description").val(localStorage.getItem("9"));
     $("#10 .description").val(localStorage.getItem("10"));
@@ -46,4 +48,6 @@ $(document).ready(function () {
   localStorage.clear();
   location.reload();
     })
+
+  timeCode();
 });
