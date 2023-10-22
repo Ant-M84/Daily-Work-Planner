@@ -27,15 +27,14 @@ $(document).ready(function () {
     }
   })
 }
-
     $("#9 .description").val(localStorage.getItem("9"));
     $("#10 .description").val(localStorage.getItem("10"));
     $("#11 .description").val(localStorage.getItem("11"));
     $("#12 .description").val(localStorage.getItem("12"));
-    $("#1 .description").val(localStorage.getItem("1"));
-    $("#2 .description").val(localStorage.getItem("2"));
-    $("#3 .description").val(localStorage.getItem("3"));
-    $("#4 .description").val(localStorage.getItem("4"));
+    $("#13 .description").val(localStorage.getItem("13"));
+    $("#14 .description").val(localStorage.getItem("14"));
+    $("#15 .description").val(localStorage.getItem("15"));
+    $("#16 .description").val(localStorage.getItem("16"));
 
   function displayDate() {
     var today = dayjs().format("dddd, MMMM D YYYY, h:mm:ss a"); 
